@@ -70,6 +70,7 @@
   width: 14px;
   height: 14px;
   border-radius: 50%;
+  background-color: var(--wood-fallback);
   background-image: var(--wood-texture);
   background-size: 328px 110px;
   background-position: center;

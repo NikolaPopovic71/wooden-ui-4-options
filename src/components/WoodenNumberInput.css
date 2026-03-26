@@ -56,6 +56,7 @@
   cursor: pointer;
   /* dark icon color — clearly visible on light wood texture */
   color: var(--wood-darker);
+  background-color: var(--wood-fallback);
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.22), rgba(0, 0, 0, 0.04)),
     var(--wood-texture);

@@ -37,7 +37,13 @@ npm run dev
 
 > **Requires**: React 19+, Vite 8+
 
-The wood texture is served from CodePen CDN (`https://assets.codepen.io/4175254/wood-pattern.png`). To self-host, download the image and update `--wood-texture` in `src/index.css`.
+The wood texture (`public/wood-pattern.png`) is self-hosted and referenced via `--wood-texture` in `src/index.css`. Before deploying, run the image through a PNG compressor to reduce its size significantly without any visible quality loss:
+
+- [Squoosh](https://squoosh.app) — browser-based, Google, free
+- [TinyPNG](https://tinypng.com) — simple drag & drop, free tier
+- [ImageOptim](https://imageoptim.com) — Mac app, batch processing
+
+Replace `public/wood-pattern.png` with the compressed version and you're done — no code changes needed.
 
 ---
 
@@ -386,7 +392,7 @@ Supports long-press on `+`/`-` buttons for rapid increment, and `↑`/`↓` arro
 
 ## Project Structure
 
-```
+```bash
 src/
 ├── index.css                       # CSS variables + body reset
 ├── main.jsx                        # React entry point

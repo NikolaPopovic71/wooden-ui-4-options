@@ -39,6 +39,7 @@
   border-radius: 50%;
   width: 28px;
   height: 28px;
+  background-color: var(--wood-fallback);
   background-image: var(--wood-texture);
   background-size: 328px 110px;
   background-position: center;
@@ -98,6 +99,7 @@
   width: 36px;
   height: 100%;
   transform: translateX(-4px);
+  background-color: var(--wood-fallback);
   background-image: var(--wood-texture);
   background-size: 328px 110px;
   background-position: center;
@@ -274,6 +276,7 @@
   border-radius: 50%;
   width: 24px;
   height: 24px;
+  background-color: var(--wood-fallback);
   background-image: var(--wood-texture);
   background-size: 328px 110px;
   background-position: center;

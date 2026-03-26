@@ -14,6 +14,7 @@
   overflow: hidden;
 
   /* wood texture base */
+  background-color: var(--wood-fallback);
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.13), rgba(0, 0, 0, 0.06)),
     var(--wood-texture);
@@ -42,6 +43,7 @@
 .wooden-btn__grain {
   position: absolute;
   inset: 0;
+  background-color: var(--wood-fallback);
   background-image: var(--wood-texture);
   background-size: 328px 110px;
   background-position: center;

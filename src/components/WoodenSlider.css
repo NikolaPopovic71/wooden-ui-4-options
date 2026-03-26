@@ -86,6 +86,7 @@
   width: 24px;
   height: 24px;
   border-radius: 50%;
+  background-color: var(--wood-fallback);
   background-image: var(--wood-texture);
   background-size: 328px 110px;
   background-position: center;
@@ -107,6 +108,7 @@
   height: 24px;
   border: none;
   border-radius: 50%;
+  background-color: var(--wood-fallback);
   background-image: var(--wood-texture);
   background-size: 328px 110px;
   background-position: center;

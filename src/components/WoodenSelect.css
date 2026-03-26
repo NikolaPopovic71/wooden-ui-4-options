@@ -26,6 +26,7 @@
   font-size: 14px;
   color: var(--wood-dark);
   text-shadow: var(--text-shadow-light);
+  background-color: var(--wood-fallback);
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.12), rgba(0, 0, 0, 0.05)),
     var(--wood-texture);
@@ -91,6 +92,7 @@
   list-style: none;
   border-radius: 5px;
   overflow: hidden;
+  background-color: var(--wood-fallback);
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.08), rgba(0, 0, 0, 0.04)),
     var(--wood-texture);
