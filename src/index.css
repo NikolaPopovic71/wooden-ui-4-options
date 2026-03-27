@@ -14,10 +14,10 @@
   --state-on: #5698bb;
   --state-on-dark: #33596e;
 
-  --text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
-  --text-shadow-light: 0 1px 1px rgba(255, 255, 255, 0.35);
+  --text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+  --text-shadow-light: 0 1px 1px rgba(255, 255, 255, 0.45);
 
-  --wood-texture: url("/wood-pattern.png");
+  --wood-texture: url("/wood-pattern.webp");
   --wood-fallback: #c9a468;
   --wood-bg-size: 328px 110px;
 
@@ -51,7 +51,7 @@
   --wood-burn: #3d1000;
   --wood-fallback: #4a1e10;
   --wood-label: #e8c8a8; /* light warm tone — readable on dark cherry */
-  --wood-texture: url("/wood-cherry.png");
+  --wood-texture: url("/wood-cherry.webp");
 }
 
 /* ─── Walnut ─────────────────────────────────────────────── */
@@ -65,7 +65,7 @@
   --wood-burn: #3d1a08;
   --wood-fallback: #7a5438;
   --wood-label: #003a59; /* light tan — readable on very dark walnut */
-  --wood-texture: url("/wood-walnut.png");
+  --wood-texture: url("/wood-walnut.webp");
 }
 
 /* ─── Spruce ─────────────────────────────────────────────── */
@@ -79,7 +79,7 @@
   --wood-burn: #5a4830;
   --wood-fallback: #b8a888;
   --wood-label: #6a5a44; /* medium dark — readable on light spruce */
-  --wood-texture: url("/wood-spruce.png");
+  --wood-texture: url("/wood-spruce.webp");
 }
 
 *,

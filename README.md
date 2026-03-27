@@ -7,13 +7,10 @@
 
 A handcrafted React component library with a skeuomorphic wood texture aesthetic. All components share a consistent visual language — carved-in inputs, raised wooden buttons, tactile toggles, and warm amber tones.
 
-![Oak](https://raw.githubusercontent.com/NikolaPopovic71/wooden-ui-react/main/public/wood-pattern.png)
-
-![Cherry](https://raw.githubusercontent.com/NikolaPopovic71/wooden-ui-react/main/public/wood-cherry.png)
-
-![Walnut](https://raw.githubusercontent.com/NikolaPopovic71/wooden-ui-react/main/public/wood-walnut.png)
-
-![Spruce](https://raw.githubusercontent.com/NikolaPopovic71/wooden-ui-react/main/public/wood-spruce.png)
+![Oak](./public/wood-pattern.webp)
+![Cherry](./public/wood-cherry.webp)
+![Walnut](./public/wood-walnut.webp)
+![Spruce](./public/wood-spruce.webp)
 
 ---
 
