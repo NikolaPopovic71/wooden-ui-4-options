@@ -1,3 +1,4 @@
+/* ─── Default theme: Oak ─────────────────────────────────── */
 :root {
   --wood-light: #d4a96a;
   --wood-mid: #a07840;
@@ -6,25 +7,79 @@
   --wood-shadow: #b75301;
   --wood-edge: #e9d38d;
   --wood-burn: #ad2201;
+  --wood-label: #6b5040; /* label/helper text — readable on light oak */
 
   --state-off: #bb5555;
   --state-off-dark: #8b3020;
   --state-on: #5698bb;
   --state-on-dark: #33596e;
 
-  --text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
-  --text-shadow-light: 0 1px 1px rgba(255, 255, 255, 0.75);
+  --text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  --text-shadow-light: 0 1px 1px rgba(255, 255, 255, 0.35);
 
   --wood-texture: url("/wood-pattern.png");
-  --wood-fallback: #c9a468; /* avg amber tone — shown before texture loads */
+  --wood-fallback: #c9a468;
+  --wood-bg-size: 657px 220px;
 
   --inset-shadow:
-    inset 0 1px 1px rgba(255, 255, 255, 0.75), inset 0 -1px 4px #b75301,
-    0 1px 4px rgba(0, 0, 0, 0.75);
+    inset 0 1px 1px rgba(255, 255, 255, 0.75),
+    inset 0 -1px 4px var(--wood-shadow), 0 1px 4px rgba(0, 0, 0, 0.75);
   --track-shadow:
     inset 0 1px 1px rgba(0, 0, 0, 0.5), 0 1px rgba(255, 255, 255, 0.5);
 
   --transition: 0.4s linear;
+}
+
+[data-theme="cherry"] {
+  --wood-bg-size: cover;
+}
+[data-theme="walnut"] {
+  --wood-bg-size: cover;
+}
+[data-theme="spruce"] {
+  --wood-bg-size: cover;
+}
+
+/* ─── Cherry ─────────────────────────────────────────────── */
+[data-theme="cherry"] {
+  --wood-light: #d4a080; /* brighter for readability on dark bg */
+  --wood-mid: #c07858;
+  --wood-dark: #5c2a18;
+  --wood-darker: #301408;
+  --wood-shadow: #6b2800;
+  --wood-edge: #e8b898;
+  --wood-burn: #3d1000;
+  --wood-fallback: #4a1e10;
+  --wood-label: #e8c8a8; /* light warm tone — readable on dark cherry */
+  --wood-texture: url("/wood-cherry.png");
+}
+
+/* ─── Walnut ─────────────────────────────────────────────── */
+[data-theme="walnut"] {
+  --wood-light: #c8a880; /* much lighter — needed for dark walnut bg */
+  --wood-mid: #b08060;
+  --wood-dark: #4a2e1c;
+  --wood-darker: #2e1a0e;
+  --wood-shadow: #6b3a18;
+  --wood-edge: #d4b080;
+  --wood-burn: #3d1a08;
+  --wood-fallback: #7a5438;
+  --wood-label: #003a59; /* light tan — readable on very dark walnut */
+  --wood-texture: url("/wood-walnut.png");
+}
+
+/* ─── Spruce ─────────────────────────────────────────────── */
+[data-theme="spruce"] {
+  --wood-light: #c8b89a;
+  --wood-mid: #9a8870;
+  --wood-dark: #7a6a54;
+  --wood-darker: #4a3e2e;
+  --wood-shadow: #8a7458;
+  --wood-edge: #e4d8c0;
+  --wood-burn: #5a4830;
+  --wood-fallback: #b8a888;
+  --wood-label: #6a5a44; /* medium dark — readable on light spruce */
+  --wood-texture: url("/wood-spruce.png");
 }
 
 *,

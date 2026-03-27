@@ -5,7 +5,7 @@
 
 .wooden-select__label {
   font-size: 13px;
-  color: #766f6a;
+  color: var(--wood-label);
   text-shadow: var(--text-shadow-light);
   margin-bottom: 8px;
 }
@@ -24,24 +24,20 @@
   font-family: "Signika", sans-serif;
   font-weight: 700;
   font-size: 14px;
-  color: var(--wood-dark);
+  color: var(--wood-label);
   text-shadow: var(--text-shadow-light);
   background-color: var(--wood-fallback);
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.12), rgba(0, 0, 0, 0.05)),
     var(--wood-texture);
-  background-size:
-    100% 100%,
-    328px 110px;
+  background-size: 100% 100%, cover;
   background-position: center;
   box-shadow:
     inset 0 1px 1px rgba(255, 255, 255, 0.65),
     inset 0 -1px 3px var(--wood-shadow),
     0 2px 4px rgba(0, 0, 0, 0.55),
     0 1px rgba(255, 255, 255, 0.4);
-  transition:
-    box-shadow 0.15s ease,
-    transform 0.1s ease;
+  transition: box-shadow 0.15s ease, transform 0.1s ease;
 }
 
 .wooden-select__trigger:hover {
@@ -96,9 +92,7 @@
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.08), rgba(0, 0, 0, 0.04)),
     var(--wood-texture);
-  background-size:
-    100% 100%,
-    328px 110px;
+  background-size: 100% 100%, cover;
   background-position: center;
   box-shadow:
     inset 0 1px 1px rgba(255, 255, 255, 0.5),
@@ -125,13 +119,11 @@
   gap: 8px;
   padding: 8px 12px;
   font-size: 14px;
-  color: #766f6a;
+  color: var(--wood-label);
   text-shadow: var(--text-shadow-light);
   cursor: pointer;
   border-bottom: 1px solid rgba(73, 31, 1, 0.15);
-  transition:
-    background-color 0.12s ease,
-    color 0.12s ease;
+  transition: background-color 0.12s ease, color 0.12s ease;
 }
 
 .wooden-select__option:last-child {
@@ -140,7 +132,7 @@
 
 .wooden-select__option:hover {
   background-color: rgba(255, 255, 255, 0.18);
-  color: var(--wood-dark);
+  color: var(--wood-label);
 }
 
 .wooden-select__option.is-selected {
@@ -151,7 +143,7 @@
 /* keyboard-focused option — distinct from mouse hover */
 .wooden-select__option.is-focused {
   background-color: rgba(255, 255, 255, 0.28);
-  color: var(--wood-dark);
+  color: var(--wood-label);
   outline: 2px solid var(--state-on);
   outline-offset: -2px;
 }

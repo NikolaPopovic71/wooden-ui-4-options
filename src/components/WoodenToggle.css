@@ -41,7 +41,7 @@
   height: 28px;
   background-color: var(--wood-fallback);
   background-image: var(--wood-texture);
-  background-size: 328px 110px;
+  background-size: var(--wood-bg-size);
   background-position: center;
   box-shadow: var(--inset-shadow);
   transition: transform var(--transition);
@@ -101,7 +101,7 @@
   transform: translateX(-4px);
   background-color: var(--wood-fallback);
   background-image: var(--wood-texture);
-  background-size: 328px 110px;
+  background-size: var(--wood-bg-size);
   background-position: center;
   box-shadow: var(--inset-shadow);
   transition: transform var(--transition);
@@ -126,7 +126,7 @@
   transform: translateY(-50%);
   font-size: 11px;
   font-weight: 700;
-  color: #fff;
+  color: #ffffff;
   text-shadow: var(--text-shadow);
   pointer-events: none;
   white-space: nowrap;
@@ -168,7 +168,7 @@
 
 .toggle-c__text {
   font-size: 14px;
-  color: #766f6a;
+  color: var(--wood-label);
   text-shadow: var(--text-shadow-light);
 }
 
@@ -278,7 +278,7 @@
   height: 24px;
   background-color: var(--wood-fallback);
   background-image: var(--wood-texture);
-  background-size: 328px 110px;
+  background-size: var(--wood-bg-size);
   background-position: center;
   box-shadow: var(--inset-shadow);
   transition: transform var(--transition);
@@ -316,7 +316,7 @@
     var(--wood-texture);
   background-size:
     100% 100%,
-    328px 110px;
+    cover;
   background-position: center;
   box-shadow:
     inset 1px 0 1px rgba(73, 31, 1, 0.25),
@@ -342,7 +342,7 @@
     var(--wood-texture);
   background-size:
     200% 100%,
-    328px 110px;
+    cover;
   background-position:
     100% 0,
     center;
@@ -368,7 +368,7 @@
 .toggle-d__text {
   position: absolute;
   font-size: 14px;
-  color: var(--wood-dark);
+  color: var(--wood-label);
   text-shadow: var(--text-shadow-light);
   transition:
     transform var(--transition),
@@ -383,7 +383,7 @@
 
 .toggle-d.is-checked .toggle-d__text--off {
   transform: translateX(-10%) scaleX(0.8);
-  color: var(--wood-dark);
+  color: var(--wood-label);
 }
 
 .toggle-d__text--on {

@@ -87,13 +87,13 @@
 /* ── Label ── */
 .wooden-checkbox__label {
   font-size: 14px;
-  color: #766f6a;
+  color: var(--wood-label);
   text-shadow: var(--text-shadow-light);
   transition: color 0.25s ease;
 }
 
 .wooden-checkbox.is-checked .wooden-checkbox__label {
-  color: var(--wood-dark);
+  color: var(--wood-label);
 }
 
 /* ── Group ── */
@@ -107,7 +107,7 @@
 
 .wooden-checkbox-group__legend {
   font-size: 13px;
-  color: #766f6a;
+  color: var(--wood-label);
   text-shadow: var(--text-shadow-light);
   margin-bottom: 10px;
 }

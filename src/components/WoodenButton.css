@@ -18,9 +18,7 @@
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.13), rgba(0, 0, 0, 0.06)),
     var(--wood-texture);
-  background-size:
-    100% 100%,
-    328px 110px;
+  background-size: 100% 100%, cover;
   background-position: center;
 
   /* raised pill illusion */
@@ -30,7 +28,7 @@
     0 3px 6px rgba(0, 0, 0, 0.5),
     0 1px rgba(255, 255, 255, 0.4);
 
-  color: var(--wood-dark);
+  color: var(--wood-label);
   text-shadow: var(--text-shadow-light);
 
   transition:
@@ -45,7 +43,7 @@
   inset: 0;
   background-color: var(--wood-fallback);
   background-image: var(--wood-texture);
-  background-size: 328px 110px;
+  background-size: cover;
   background-position: center;
   opacity: 0;
   transition: opacity 0.1s ease;
@@ -132,9 +130,7 @@
     var(--wood-texture);
   background-blend-mode: normal, luminosity;
   background-color: var(--state-on);
-  background-size:
-    100% 100%,
-    328px 110px;
+  background-size: 100% 100%, cover;
   color: #fff;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
   box-shadow:
@@ -167,9 +163,7 @@
     var(--wood-texture);
   background-blend-mode: normal, luminosity;
   background-color: var(--state-off);
-  background-size:
-    100% 100%,
-    328px 110px;
+  background-size: 100% 100%, cover;
   color: #fff;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
   box-shadow:

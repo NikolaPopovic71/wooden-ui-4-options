@@ -8,7 +8,7 @@
 
 .wooden-radio-group__legend {
   font-size: 13px;
-  color: #766f6a;
+  color: var(--wood-label);
   text-shadow: var(--text-shadow-light);
   margin-bottom: 10px;
 }
@@ -72,7 +72,7 @@
   border-radius: 50%;
   background-color: var(--wood-fallback);
   background-image: var(--wood-texture);
-  background-size: 328px 110px;
+  background-size: cover;
   background-position: center;
   box-shadow:
     inset 0 1px 1px rgba(255, 255, 255, 0.75),
@@ -104,11 +104,11 @@
 /* label text */
 .wooden-radio__label {
   font-size: 14px;
-  color: #766f6a;
+  color: var(--wood-label);
   text-shadow: var(--text-shadow-light);
   transition: color var(--transition);
 }
 
 .wooden-radio.is-checked .wooden-radio__label {
-  color: var(--wood-dark);
+  color: var(--wood-label);
 }

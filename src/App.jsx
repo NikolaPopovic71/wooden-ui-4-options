@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   WoodenToggleA,
   WoodenToggleB,
@@ -133,12 +133,37 @@ export default function App() {
 
   const update = (key) => (val) => setState((s) => ({ ...s, [key]: val }));
 
+  // ── Theme ──
+  const themes = ["oak", "cherry", "walnut", "spruce"];
+  const [theme, setTheme] = useState("oak");
+
+  useEffect(() => {
+    if (theme === "oak") {
+      document.body.removeAttribute("data-theme");
+    } else {
+      document.body.setAttribute("data-theme", theme);
+    }
+  }, [theme]);
+
   return (
     <div className="app">
       <header className="app__header">
         <div className="app__header-knot" />
         <h1 className="app__title">Wooden UI</h1>
         <p className="app__subtitle">Handcrafted React Components</p>
+        <div className="app__themes">
+          {themes.map((t) => (
+            <button
+              key={t}
+              className={`app__theme-btn ${theme === t ? "is-active" : ""}`}
+              onClick={() => setTheme(t)}
+              aria-label={`Switch to ${t} theme`}
+              aria-pressed={theme === t}
+            >
+              {t}
+            </button>
+          ))}
+        </div>
       </header>
 
       <div className="app__grid">

@@ -13,7 +13,7 @@
 .wooden-textarea__label {
   font-size: 13px;
   font-weight: 700;
-  color: #766f6a;
+  color: var(--wood-label);
   text-shadow: var(--text-shadow-light);
   cursor: default;
 }
@@ -67,7 +67,7 @@
   border: none;
   outline: none;
   background: transparent;
-  padding: 10px 12px 22px; /* bottom space for grip */
+  padding: 10px 12px 22px;   /* bottom space for grip */
   font-family: "Signika", sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -75,11 +75,12 @@
   color: var(--wood-light);
   caret-color: var(--state-on);
   resize: vertical;
-  overflow: hidden; /* hidden when auto-resize active */
+  overflow: hidden;          /* hidden when auto-resize active */
 }
 
-.wooden-textarea__el::placeholder {
-  color: rgba(164, 130, 96, 0.5);
+.wooden-input__el::placeholder {
+  color: var(--wood-light);
+  opacity: 0.5;
   font-weight: 400;
 }
 
@@ -114,18 +115,9 @@
 }
 
 /* diagonal staircase lengths */
-.wooden-textarea__resize-grip span:nth-child(1) {
-  width: 6px;
-  margin-left: 8px;
-}
-.wooden-textarea__resize-grip span:nth-child(2) {
-  width: 10px;
-  margin-left: 4px;
-}
-.wooden-textarea__resize-grip span:nth-child(3) {
-  width: 14px;
-  margin-left: 0;
-}
+.wooden-textarea__resize-grip span:nth-child(1) { width: 6px; margin-left: 8px; }
+.wooden-textarea__resize-grip span:nth-child(2) { width: 10px; margin-left: 4px; }
+.wooden-textarea__resize-grip span:nth-child(3) { width: 14px; margin-left: 0; }
 
 /* ── Meta row ── */
 .wooden-textarea__meta {
@@ -139,7 +131,7 @@
 .wooden-textarea__helper {
   font-size: 12px;
   font-weight: 400;
-  color: #8a8178;
+  color: var(--wood-label);
   text-shadow: var(--text-shadow-light);
 }
 
@@ -153,7 +145,7 @@
 .wooden-textarea__counter {
   font-size: 11px;
   font-weight: 400;
-  color: #8a8178;
+  color: var(--wood-label);
   text-shadow: var(--text-shadow-light);
   margin-left: auto;
   white-space: nowrap;

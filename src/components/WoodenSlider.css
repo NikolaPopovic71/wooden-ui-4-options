@@ -13,13 +13,13 @@
 
 .wooden-slider__label {
   font-size: 13px;
-  color: #766f6a;
+  color: var(--wood-label);
   text-shadow: var(--text-shadow-light);
 }
 
 .wooden-slider__value {
   font-size: 13px;
-  color: var(--wood-dark);
+  color: var(--wood-label);
   text-shadow: var(--text-shadow-light);
   min-width: 28px;
   text-align: right;
@@ -88,7 +88,7 @@
   border-radius: 50%;
   background-color: var(--wood-fallback);
   background-image: var(--wood-texture);
-  background-size: 328px 110px;
+  background-size: cover;
   background-position: center;
   box-shadow: var(--inset-shadow);
   transition: transform 0.15s ease;
@@ -110,7 +110,7 @@
   border-radius: 50%;
   background-color: var(--wood-fallback);
   background-image: var(--wood-texture);
-  background-size: 328px 110px;
+  background-size: cover;
   background-position: center;
   box-shadow: var(--inset-shadow);
   cursor: pointer;
@@ -130,7 +130,7 @@
   display: flex;
   justify-content: space-between;
   font-size: 11px;
-  color: #8a8178;
+  color: var(--wood-label);
   text-shadow: var(--text-shadow-light);
   padding: 0 2px;
 }
