@@ -1,13 +1,16 @@
 # 🪵 Wooden UI
 
-[![Version](https://img.shields.io/badge/version-1.0.0-b75301)](https://github.com/NikolaPopovic71/wooden-ui-react)
+[![Version](https://img.shields.io/badge/version-1.1.0-b75301)](https://github.com/NikolaPopovic71/wooden-ui-react)
 [![License](https://img.shields.io/badge/license-MIT-5698bb)](./LICENSE)
 [![React](https://img.shields.io/badge/React-19%2B-61dafb?logo=react&logoColor=white)](https://react.dev)
 [![Vite](https://img.shields.io/badge/Vite-8%2B-646cff?logo=vite&logoColor=white)](https://vitejs.dev)
 
 A handcrafted React component library with a skeuomorphic wood texture aesthetic. All components share a consistent visual language — carved-in inputs, raised wooden buttons, tactile toggles, and warm amber tones.
 
-![Wooden UI Preview](https://assets.codepen.io/4175254/wood-pattern.png)
+![Oak](https://raw.githubusercontent.com/NikolaPopovic71/wooden-ui-react/main/public/wood-pattern.png)
+![Cherry](https://raw.githubusercontent.com/NikolaPopovic71/wooden-ui-react/main/public/wood-cherry.png)
+![Walnut](https://raw.githubusercontent.com/NikolaPopovic71/wooden-ui-react/main/public/wood-walnut.png)
+![Spruce](https://raw.githubusercontent.com/NikolaPopovic71/wooden-ui-react/main/public/wood-spruce.png)
 
 ---
 
@@ -37,39 +40,98 @@ npm run dev
 
 > **Requires**: React 19+, Vite 8+
 
-The wood texture (`public/wood-pattern.png`) is self-hosted and referenced via `--wood-texture` in `src/index.css`. Before deploying, run the image through a PNG compressor to reduce its size significantly without any visible quality loss:
+---
+
+## Wood Themes
+
+Wooden UI includes four wood themes: **Oak**, **Cherry**, **Walnut**, and **Spruce**. Each theme has its own color palette and texture.
+
+### Switching themes
+
+Apply a `data-theme` attribute to `<body>` to switch themes globally:
+
+```js
+// Vanilla JS
+document.body.setAttribute('data-theme', 'cherry')
+document.body.removeAttribute('data-theme') // back to Oak (default)
+```
+
+```jsx
+// React
+useEffect(() => {
+  if (theme === 'oak') {
+    document.body.removeAttribute('data-theme')
+  } else {
+    document.body.setAttribute('data-theme', theme)
+  }
+}, [theme])
+```
+
+### Available themes
+
+| Theme | `data-theme` value | Texture file |
+|-------|--------------------|-------------|
+| Oak | *(default, no attribute)* | `public/wood-pattern.png` |
+| Cherry | `cherry` | `public/wood-cherry.png` |
+| Walnut | `walnut` | `public/wood-walnut.png` |
+| Spruce | `spruce` | `public/wood-spruce.png` |
+
+Cherry, Walnut and Spruce require the corresponding PNG files in the `public/` folder. Oak uses a tiling texture — the other themes use full photo textures with `background-size: cover`.
+
+### Texture compression
+
+Before deploying, run all texture images through a PNG compressor to reduce file size without visible quality loss:
 
 - [Squoosh](https://squoosh.app) — browser-based, Google, free
 - [TinyPNG](https://tinypng.com) — simple drag & drop, free tier
 - [ImageOptim](https://imageoptim.com) — Mac app, batch processing
 
-Replace `public/wood-pattern.png` with the compressed version and you're done — no code changes needed.
+Replace the files in `public/` with the compressed versions — no code changes needed.
 
 ---
 
 ## CSS Variables
 
-All components share a set of CSS custom properties defined in `src/index.css`:
+All components share CSS custom properties defined in `src/index.css`. Override these to create custom themes.
 
 ```css
 :root {
-  --wood-light:   #d4a96a;   /* light grain highlight */
-  --wood-mid:     #a07840;   /* mid tone */
-  --wood-dark:    #775b40;   /* dark grain, text */
-  --wood-darker:  #4b3928;   /* carved-in surfaces */
-  --wood-shadow:  #b75301;   /* warm inner shadow */
-  --wood-edge:    #e9d38d;   /* bright edge highlight */
-  --wood-burn:    #ad2201;   /* deep burn shadow */
+  /* Wood tones */
+  --wood-light:    #d4a96a;   /* light grain highlight */
+  --wood-mid:      #a07840;   /* mid tone */
+  --wood-dark:     #775b40;   /* dark grain */
+  --wood-darker:   #4b3928;   /* carved-in surfaces */
+  --wood-shadow:   #b75301;   /* warm inner shadow */
+  --wood-edge:     #e9d38d;   /* bright edge highlight */
+  --wood-burn:     #ad2201;   /* deepest burn shadow */
+  --wood-fallback: #c9a468;   /* shown before texture loads */
+  --wood-label:    #6b5040;   /* label & UI text color */
 
-  --state-off:    #bb5555;   /* red — inactive/danger */
-  --state-on:     #5698bb;   /* blue — active/primary */
+  /* States */
+  --state-off:      #bb5555;  /* red — inactive/danger */
+  --state-off-dark: #8b3020;
+  --state-on:       #5698bb;  /* blue — active/primary */
+  --state-on-dark:  #33596e;
 
-  --wood-texture: url("...");
-  --inset-shadow: ...;       /* raised knob shadow */
-  --track-shadow: ...;       /* track/container shadow */
-  --transition:   0.4s linear;
+  /* Texture */
+  --wood-texture:  url("/wood-pattern.png");
+  --wood-bg-size:  328px 110px;  /* tiling size for Oak */
+
+  /* Shadows */
+  --inset-shadow: inset 0 1px 1px rgba(255,255,255,0.75),
+                  inset 0 -1px 4px var(--wood-shadow),
+                  0 1px 4px rgba(0,0,0,0.75);
+  --track-shadow: inset 0 1px 1px rgba(0,0,0,0.5),
+                  0 1px rgba(255,255,255,0.5);
+
+  --text-shadow:       0 1px 1px rgba(0, 0, 0, 0.5);
+  --text-shadow-light: 0 1px 1px rgba(255, 255, 255, 0.75);
+
+  --transition: 0.4s linear;
 }
 ```
+
+The `--wood-label` variable is the key text color — it is set per theme to ensure readable contrast on both light (Oak, Spruce) and dark (Cherry, Walnut) backgrounds.
 
 ---
 
@@ -208,7 +270,7 @@ import { WoodenSelect } from './components/WoodenSelect'
 | `defaultValue` | `string` | first option | Initially selected value |
 | `onChange` | `(value: string) => void` | — | Change callback |
 
-Closes on outside click and `Escape` key.
+Closes on outside click and `Escape` key. Full keyboard navigation: `↑↓` to navigate, `Enter` to select, type a letter to jump to first matching option.
 
 ---
 
@@ -284,6 +346,8 @@ import { WoodenButton } from './components/WoodenButton'
 | `iconAfter` | `ReactNode` | — | Trailing icon |
 | `type` | `string` | `'button'` | HTML button type |
 | `onClick` | `() => void` | — | Click handler |
+| `className` | `string` | `''` | Additional CSS class |
+| `...rest` | — | — | Any native `<button>` attribute (`aria-*`, `data-*`, `form`, etc.) |
 
 ---
 
@@ -392,21 +456,28 @@ Supports long-press on `+`/`-` buttons for rapid increment, and `↑`/`↓` arro
 
 ## Project Structure
 
-```bash
+```
+public/
+├── wood-pattern.png            # Oak tiling texture
+├── wood-cherry.png             # Cherry theme texture
+├── wood-walnut.png             # Walnut theme texture
+└── wood-spruce.png             # Spruce theme texture
+
 src/
-├── index.css                       # CSS variables + body reset
-├── main.jsx                        # React entry point
-├── App.jsx                         # Full showcase
-├── App.css                         # Showcase layout styles
+├── index.css                   # CSS variables + themes + body reset
+├── main.jsx                    # React entry point
+├── lib.js                      # Library barrel exports
+├── App.jsx                     # Full component showcase
+├── App.css                     # Showcase layout styles
 └── components/
-    ├── WoodenToggle.jsx/.css       # Toggles A, B, C, D
-    ├── WoodenSlider.jsx/.css       # Range slider
-    ├── WoodenRadio.jsx/.css        # Radio group
-    ├── WoodenSelect.jsx/.css       # Custom dropdown
-    ├── WoodenCheckbox.jsx/.css     # Checkbox + CheckboxGroup
-    ├── WoodenButton.jsx/.css       # Button (default / primary / danger)
-    ├── WoodenInput.jsx/.css        # Text input
-    ├── WoodenTextarea.jsx/.css     # Textarea with auto-resize
+    ├── WoodenToggle.jsx/.css   # Toggles A, B, C, D
+    ├── WoodenSlider.jsx/.css   # Range slider
+    ├── WoodenRadio.jsx/.css    # Radio group
+    ├── WoodenSelect.jsx/.css   # Custom dropdown
+    ├── WoodenCheckbox.jsx/.css # Checkbox + CheckboxGroup
+    ├── WoodenButton.jsx/.css   # Button (default / primary / danger)
+    ├── WoodenInput.jsx/.css    # Text input
+    ├── WoodenTextarea.jsx/.css # Textarea with auto-resize
     └── WoodenNumberInput.jsx/.css  # Stepper with long-press
 ```
 
@@ -415,10 +486,30 @@ src/
 ## Accessibility
 
 - All interactive elements have accessible labels (`aria-label`, `aria-describedby`, `htmlFor`)
+- `WoodenSelect` follows the WAI-ARIA combobox pattern with full keyboard navigation
 - Error messages use `role="alert"` for screen reader announcement
 - Focus styles are preserved (`focus-visible` outlines using `--state-on` blue)
 - `disabled` states are conveyed via both visual opacity and `disabled` attribute
 - Keyboard navigation: `Tab`, `Enter`, `Space`, `Escape`, `Arrow` keys all work as expected
+- `WoodenNumberInput` uses Pointer Events API to prevent double-firing on mobile touch
+
+---
+
+## Changelog
+
+### v1.1.0
+- Added **Cherry**, **Walnut** and **Spruce** wood themes with photo textures
+- Added theme switcher UI in the showcase (`App.jsx`)
+- Added `--wood-label` CSS variable for per-theme text contrast
+- Added `--wood-fallback` CSS variable shown before textures load
+- Added `--wood-bg-size` CSS variable for per-theme texture sizing
+- Fixed `WoodenSelect` keyboard navigation (WAI-ARIA combobox pattern)
+- Fixed `WoodenNumberInput` mobile double-fire (Pointer Events API)
+- Fixed `WoodenButton` missing `...rest` props spread
+- Fixed all hardcoded gray text colors replaced with `var(--wood-label)`
+
+### v1.0.0
+- Initial release with 11 components: Toggle (A/B/C/D), Slider, Radio, Select, Checkbox, Button, Input, Textarea, NumberInput
 
 ---
 
