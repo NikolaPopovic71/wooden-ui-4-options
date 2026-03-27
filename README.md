@@ -19,21 +19,21 @@ A handcrafted React component library with a skeuomorphic wood texture aesthetic
 ### From npm *(once published)*
 
 ```bash
-npm install wooden-ui-react
+npm install wooden-ui-4-options
 ```
 
 Then import components and styles:
 
 ```jsx
-import { WoodenButton, WoodenInput } from 'wooden-ui-react'
-import 'wooden-ui-react/style.css'
+import { WoodenButton, WoodenInput } from 'wooden-ui-4-options'
+import 'wooden-ui-4-options/style.css'
 ```
 
 ### Local development
 
 ```bash
-git clone https://github.com/NikolaPopovic71/wooden-ui-react.git
-cd wooden-ui-react
+git clone https://github.com/NikolaPopovic71/wooden-ui-4-options.git
+cd wooden-ui-4-options
 npm install
 npm run dev
 ```
@@ -71,16 +71,16 @@ useEffect(() => {
 
 | Theme | `data-theme` value | Texture file |
 |-------|--------------------|-------------|
-| Oak | *(default, no attribute)* | `public/wood-pattern.png` |
-| Cherry | `cherry` | `public/wood-cherry.png` |
-| Walnut | `walnut` | `public/wood-walnut.png` |
-| Spruce | `spruce` | `public/wood-spruce.png` |
+| Oak | *(default, no attribute)* | `public/wood-pattern.webp` |
+| Cherry | `cherry` | `public/wood-cherry.webp` |
+| Walnut | `walnut` | `public/wood-walnut.webp` |
+| Spruce | `spruce` | `public/wood-spruce.webp` |
 
 Cherry, Walnut and Spruce require the corresponding PNG files in the `public/` folder. Oak uses a tiling texture — the other themes use full photo textures with `background-size: cover`.
 
 ### Texture compression
 
-Before deploying, run all texture images through a PNG compressor to reduce file size without visible quality loss:
+If you insist on PNG, before deploying, run all texture images through a PNG compressor to reduce file size without visible quality loss:
 
 - [Squoosh](https://squoosh.app) — browser-based, Google, free
 - [TinyPNG](https://tinypng.com) — simple drag & drop, free tier
@@ -456,12 +456,12 @@ Supports long-press on `+`/`-` buttons for rapid increment, and `↑`/`↓` arro
 
 ## Project Structure
 
-```
+```bash
 public/
-├── wood-pattern.png            # Oak tiling texture
-├── wood-cherry.png             # Cherry theme texture
-├── wood-walnut.png             # Walnut theme texture
-└── wood-spruce.png             # Spruce theme texture
+├── wood-pattern.webp            # Oak tiling texture
+├── wood-cherry.webp             # Cherry theme texture
+├── wood-walnut.webp             # Walnut theme texture
+└── wood-spruce.webp             # Spruce theme texture
 
 src/
 ├── index.css                   # CSS variables + themes + body reset
@@ -516,3 +516,7 @@ src/
 ## License
 
 MIT — free to use and modify. Attribution appreciated. 🪵
+
+---
+
+Built by [ponITech](https://ponitech.pro) · [@NikolaP_itech](https://x.com/NikolaP_itech)
